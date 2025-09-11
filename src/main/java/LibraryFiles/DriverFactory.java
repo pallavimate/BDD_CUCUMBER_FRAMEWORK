@@ -2,10 +2,14 @@ package LibraryFiles;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DriverFactory
 {
@@ -14,7 +18,10 @@ public static void initializeBrowser(String browserName)
 {
     if (browserName.equalsIgnoreCase("Chrome"))
     {
-        driver=new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--incognito");
+
+        driver = new ChromeDriver(options);
     }
     else  if (browserName.equalsIgnoreCase("Firefox"))
     {

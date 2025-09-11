@@ -13,6 +13,7 @@ public class SwagLabHomePage {
     @FindBy(xpath = "(//div[@class='inventory_item_price'])[1]")private WebElement productprice;
     @FindBy(xpath = "//div[@class='inventory_item_price']")private List<WebElement> allproductprice;
     @FindBy(xpath = "//button[@id='add-to-cart-sauce-labs-backpack']")private WebElement AddToCartProduct;
+    @FindBy(xpath = "//button[@id='add-to-cart-sauce-labs-bike-light']")private WebElement AddToCartsauceLabBikeLight;
     @FindBy(xpath = "//a[@class='shopping_cart_link']")private WebElement GoTocart;
 
 
@@ -59,5 +60,9 @@ public class SwagLabHomePage {
         GoTocart.click();
 
     }
+public void     AddToCartsauceLabBikeLightSwagLabHomePage()
+{
+    AddToCartsauceLabBikeLight.click();
+}
 
 }

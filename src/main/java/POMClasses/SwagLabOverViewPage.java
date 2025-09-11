@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SwagLabOverViewPage
 {
-    @FindBy(xpath = "//button[@class='finish']")private WebElement Finish ;
+    @FindBy(xpath = "//button[text()='Finish']")private WebElement Finish ;
     public SwagLabOverViewPage(WebDriver driver)
     {
         PageFactory.initElements(driver, this);
